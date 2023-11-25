@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/currency_icon"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="640dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/amount_in_kenyan_shilling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_amount" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amount_in_kenyan_shilling"
+        android:layout_width="195dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:hint="@string/amount_in_kenyan_shilling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amount_in_kenyan_shilling_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/icon_service_group"
+        android:layout_width="28dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="578dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/service_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_icon"
+        app:srcCompat="@drawable/ic_convert" />
+
+    <TextView
+        android:id="@+id/service_question"
+        style="@style/Widget.CurrencyApp.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="170dp"
+        android:text="@string/amount_to_convert"
+        app:layout_constraintBottom_toTopOf="@+id/currency_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_in_kenyan_shilling" />
+
+    <RadioGroup
+        android:id="@+id/currency_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:checkedButton="@id/Dollar_rate"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_question">
+
+        <!-- ADD THE CURRENCY RATES HERE -->
+        <RadioButton
+            android:id="@+id/Dollar_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dollars_0_0069" />
+
+        <RadioButton
+            android:id="@+id/Euro_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/euro_0_0064" />
+
+        <RadioButton
+            android:id="@+id/Pound_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pounds_0_0055" />
+
+        <RadioButton
+            android:id="@+id/Ugandan_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ugandan_25_57" />
+
+        <RadioButton
+            android:id="@+id/Tanzanian_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tanzanian_17_16" />
+
+        <RadioButton
+            android:id="@+id/Sudanese_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sudanese_4_12" />
+
+        <RadioButton
+            android:id="@+id/Norway_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/norwigian_0_074" />
+
+        <RadioButton
+            android:id="@+id/Denmark_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/danish_0_048" />
+    </RadioGroup>
+
+
+    <ImageView
+        android:id="@+id/icon_round_up"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="419dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="132dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/round_up_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_service_group"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_round_up" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/round_up_switch"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="16dp"
+        android:checked="true"
+        android:text="@string/convert_amount"
+        app:layout_constraintBottom_toTopOf="@+id/convert_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="@id/currency_options"
+        app:layout_constraintTop_toBottomOf="@id/currency_options" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
+
+    <TextView
+        android:id="@+id/conversion_result"
+        style="@style/Widget.CurrencyApp.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        tools:text="Amount: ksh100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

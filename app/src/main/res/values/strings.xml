@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CURRENCY APP</string>
+    <string name="amount_in_kenyan_shilling">Amount In Kenyan Shilling</string>
+    <string name="amount_to_convert">Amount to Convert?</string>
+    <string name="dollars_0_0069">Dollars(0.0069)</string>
+    <string name="euro_0_0064">Euro(0.0064)</string>
+    <string name="pounds_0_0055">Pounds(0.0055)</string>
+    <string name="ugandan_25_57">Ugandan(25.57)</string>
+    <string name="tanzanian_17_16">Tanzanian(17.16)</string>
+    <string name="sudanese_4_12">Sudanese(4.12)</string>
+    <string name="norwigian_0_074">Norwigian(0.074)</string>
+    <string name="danish_0_048">Danish(0.048)</string>
+    <string name="convert_amount">Convert amount?</string>
+    <string name="convert">CONVERT</string>
+    <string name="amount">AMOUNT: %s</string>
+    <string name="label">label</string>
+</resources>
